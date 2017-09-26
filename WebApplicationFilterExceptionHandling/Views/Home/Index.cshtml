@@ -1,0 +1,27 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div>
+    <h1>Index</h1>
+</div>
+
+<div>
+    <h2>Filter type: @ViewData["description"]</h2>
+    <h3>Id: @ViewData["id"]</h3>
+</div>
+
+<p>id = 10 to cause Unauthorised result</p>
+<p>id = 100 causes an exception in the action</p>
+<p>id = 1000 causes an exception in the filter</p>
+
+<ul>
+    <li><a href="?id=1">Authorised</a></li>
+    <li><a href="?id=11">Unauthorised</a></li>
+</ul>
+
+<ul>
+    <li><a href="/Home/Index">CustomAuthorisationFilter</a></li>
+    <li><a href="/Home/IndexCustomTypeFilterAttribute">CustomTypeFilterAttribute</a></li>
+    <li><a href="/Home/IndexCustomApplicationFilter">CustomApplicationFilter</a></li>
+</ul>
